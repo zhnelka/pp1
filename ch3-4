@@ -1,0 +1,20 @@
+//D. Число сочетаний
+#include <iostream>
+
+using namespace std;
+
+long long factorial(int x) {
+    long long result = 1;
+    for (int i = 1; i <= x; ++i) {
+        result *= i;
+    }
+    return result;
+}
+
+int main() {
+    int n, k;
+    cin >> n >> k;
+    long long combinations = factorial(n) / (factorial(k) * factorial(n - k));
+    cout << combinations << endl;
+    return 0;
+}
