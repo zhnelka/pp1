@@ -1,0 +1,35 @@
+//Количество совпадающих
+#include <iostream>
+#include <set>
+#include <sstream>
+
+using namespace std;
+
+int main() {
+    string line1, line2;
+    getline(cin, line1);
+    getline(cin, line2);
+
+    set<int> set1, set2;
+    stringstream ss1(line1), ss2(line2);
+    int number;
+
+    while (ss1 >> number) {
+        set1.insert(number);
+    }
+
+    while (ss2 >> number) {
+        set2.insert(number);
+    }
+
+    int count = 0;
+    for (const int& num : set1) {
+        if (set2.count(num)) {
+            count++;
+        }
+    }
+
+    cout << count << endl;
+
+    return 0;
+}
