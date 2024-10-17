@@ -1,0 +1,15 @@
+//E. МКАД
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int v, t;
+    cin >> v >> t;
+    int distance = (v * t) % 109;  
+    if (distance < 0) {            
+        distance += 109;
+    }
+    cout << distance << endl;
+    return 0;
+}
