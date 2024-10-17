@@ -1,0 +1,19 @@
+//D. Точная степень двойки
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+
+    bool isPowerOfTwo = (N > 0) && ((N & (N - 1)) == 0);
+
+    if (isPowerOfTwo) {
+        cout << "YES" << endl;
+    } else {
+        cout << "NO" << endl;
+    }
+
+    return 0;
+}
