@@ -1,0 +1,31 @@
+//B. Центр тяжести
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+struct Point {
+    int x;
+    int y;
+};
+
+int main() {
+    int n;
+    cin >> n;
+
+    Point points[100];
+    double sumX = 0, sumY = 0;
+
+    for (int i = 0; i < n; ++i) {
+        cin >> points[i].x >> points[i].y;
+        sumX += points[i].x;
+        sumY += points[i].y;
+    }
+
+    double centerX = sumX / n;
+    double centerY = sumY / n;
+
+    cout << fixed << setprecision(15) << centerX << " " << centerY << endl;
+
+    return 0;
+}
