@@ -1,0 +1,11 @@
+//C. Дележ яблок - 1
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int N, K;
+    cin >> N >> K;
+    cout << K / N << endl;
+    return 0;
+}
