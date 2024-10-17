@@ -1,0 +1,21 @@
+//E. Двоичный логарифм
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+
+    int k = 0;
+    int powerOfTwo = 1;
+
+    while (powerOfTwo < N) {
+        powerOfTwo *= 2;
+        k++;
+    }
+
+    cout << k << endl;
+
+    return 0;
+}
